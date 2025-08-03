@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أضف فريم لصورتك</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- العنوان الجديد -->
+    <h2 class="frame-title">فريم دفعة 74 طب عين شمس</h2>
+
+    <h1>أضف فريم لصورتك</h1>
+    
+    <!-- نموذج رفع الصورة -->
+    <input type="file" id="image-upload" accept="image/*">
+    
+    <div class="image-container">
+        <!-- هنا سيتم عرض الصورة مع الفريم -->
+        <div id="frame-container">
+            <img id="image-preview" src="" alt="" style="display: none;">
+        </div>
+    </div>
+    
+    <button id="download-btn" style="display: none;">تحميل الصورة</button>
+    
+    <!-- زر انشاء صورة جديدة -->
+    <button id="new-image-btn" style="display: none;">إنشاء صورة جديدة</button>
+
+    <!-- أزرار التكبير والتصغير -->
+    <div class="controls">
+        <button id="zoom-in">تكبير الصورة</button>
+        <button id="zoom-out">تصغير الصورة</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
