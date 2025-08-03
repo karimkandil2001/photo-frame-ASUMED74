@@ -63,15 +63,7 @@ h1:hover {
     transition: transform 0.3s ease;
 }
 
-/* أزرار التحكم في التكبير والتصغير */
-.controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 10px;
-}
-
-/* تنسيق الأزرار */
+/* أزرار التحكم */
 button {
     padding: 10px 20px;
     background-color: #f39c12;
