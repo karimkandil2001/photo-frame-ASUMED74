@@ -1,9 +1,6 @@
 document.getElementById('image-upload').addEventListener('change', handleImageUpload);
 
-// تحميل الفريم
-const frame = new Image();
-frame.crossOrigin = "Anonymous";  // إضافة crossOrigin لدعم CORS
-frame.src = 'https://i.ibb.co/DPMc7bFL/frame-png.png'; // رابط الفريم
+const imagePreview = document.getElementById('image-preview');
 
 let moveX = 0;  // الحركة الأفقية
 let moveY = 0;  // الحركة الرأسية
@@ -12,8 +9,6 @@ let isDragging = false; // لتحديد إذا كان المستخدم يسحب 
 let startX, startY;
 
 // تحريك الصورة عند السحب
-const imagePreview = document.getElementById('image-preview');
-
 imagePreview.addEventListener('mousedown', (e) => {
     isDragging = true;
     startX = e.clientX - moveX;
@@ -83,15 +78,4 @@ document.getElementById('new-image-btn').addEventListener('click', function() {
     document.getElementById('image-preview').style.display = 'none'; // إخفاء الصورة المعروضة
     document.getElementById('download-btn').style.display = 'none'; // إخفاء زر التحميل
     document.getElementById('new-image-btn').style.display = 'none'; // إخفاء زر "إنشاء صورة جديدة"
-});
-
-// التحكم في التكبير والتصغير
-document.getElementById('zoom-in').addEventListener('click', () => {
-    scale += 0.1;  // زيادة التكبير
-    imagePreview.style.transform = `translate(${moveX}px, ${moveY}px) scale(${scale})`;
-});
-
-document.getElementById('zoom-out').addEventListener('click', () => {
-    scale -= 0.1;  // تقليل التكبير
-    imagePreview.style.transform = `translate(${moveX}px, ${moveY}px) scale(${scale})`;
 });
